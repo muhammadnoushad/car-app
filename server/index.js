@@ -18,7 +18,7 @@ mongoose.connect(process.env.DB_CONNECTION,
             useNewUrlParser: true},()=>console.log("Db is connected"));
 
 
-//handle production
+//handle production//
 if (process.env.NODE_ENV === 'production') {
     // Static folder
     app.use(express.static(__dirname + '/public/'));
@@ -28,7 +28,8 @@ if (process.env.NODE_ENV === 'production') {
   }
 
 ///connect to port
-const port = process.env.port || 5000;
-app.listen(port,()=>console.log(`server started on ${port}`));
+const port = process.env.PORT || 5000;
+app.listen(port, () => console.log(`Server started on port ${port}`));
+
     
 
