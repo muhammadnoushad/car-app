@@ -14,7 +14,8 @@ app.use('/api/posts',posts);
 
 //connect to database
 mongoose.connect(process.env.DB_CONNECTION,
-        {useNewUrlParser:true},()=>console.log("Db is connected"));
+        {useUnifiedTopology: true,
+            useNewUrlParser: true},()=>console.log("Db is connected"));
 
 
 //handle production
