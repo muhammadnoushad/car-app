@@ -10,7 +10,11 @@ app.use(cors());
 app.use(express.json());
 
 const posts = require('./routes/api/posts');
+const provider = require('./routes/api/provider');
+const car = require('./routes/api/car');
 app.use('/api/posts',posts);
+app.use('/api/provider',provider);
+app.use('/api/car',car);
 
 //connect to database
 mongoose.connect(process.env.DB_CONNECTION,
